@@ -1,348 +1,23 @@
 <!doctype html>
 <html lang="pt-BR">
-<script>document.documentElement.classList.add('js')</script>
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HG Transportes | Transporte de veículos para todo o Brasil</title>
-<meta name="description" content="HG Transportes: transporte de veículos por caminhão-cegonha para todo o Brasil. Retirada em leilão, coleta e entrega, seguro de carga. Peça sua cotação.">
+<title data-cms="seo.titulo" data-cms-label="Título na aba e no Google">HG Transportes | Transporte de veículos para todo o Brasil</title>
+<meta name="description" data-cms="seo.descricao" data-cms-type="meta" data-cms-label="Descrição que aparece no Google" content="HG Transportes: transporte de veículos por caminhão-cegonha para todo o Brasil. Retirada em leilão, coleta e entrega, seguro de carga. Peça sua cotação.">
 <meta property="og:title" content="HG Transportes | Transporte de veículos para todo o Brasil">
 <meta property="og:description" content="Transporte de veículos com segurança, agilidade e preço justo.">
 <meta property="og:image" content="assets/fotos/scania-cegonha.jpg">
 <meta name="theme-color" content="#001a2b">
+<meta name="hg-whatsapp" data-cms="contato.whatsapp" data-cms-type="whatsapp" data-cms-group="Contato e rodapé" data-cms-label="Número do WhatsApp (recebe as cotações)" content="555193775912">
 <!-- prévia: remover a linha abaixo ao publicar em hgtransportesrs.com.br -->
 <meta name="robots" content="noindex">
 <link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy-950:#00121f; --navy-900:#001a2b; --navy-800:#00263e; --navy-700:#003a5b; --navy-600:#0b4d74;
-  --red:#d9143a; --red-dark:#b80f30; --red-soft:#ff6b85;
-  --ink:#0f1c26; --muted:#56656f; --line:#e3e9ee; --bg:#f4f7f9; --white:#fff;
-  --radius:20px; --shadow:0 24px 60px -24px rgba(0,38,62,.45);
-  --ease:cubic-bezier(.22,1,.36,1);
-  --wrap:1200px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:Archivo,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:Archivo,sans-serif;line-height:1.05;letter-spacing:-.025em}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 .78rem/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
-.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
-.dark .eyebrow,.hero .eyebrow{color:var(--red-soft)}
-svg{flex-shrink:0}
-
-/* progress bar */
-.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--red),var(--red-soft));transform-origin:0 50%;transform:scaleX(0);z-index:100}
-
-/* Buttons */
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 1rem Archivo,sans-serif;padding:17px 30px;border-radius:999px;border:0;cursor:pointer;transition:transform .35s var(--ease),background .25s,box-shadow .35s var(--ease)}
-.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s var(--ease)}
-.btn:hover::after{transform:translateX(120%)}
-.btn:hover{transform:translateY(-3px)}
-.btn .arr{transition:transform .35s var(--ease)}
-.btn:hover .arr{transform:translateX(4px)}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 30px -12px rgba(217,20,58,.8)}
-.btn-red:hover{background:var(--red-dark);box-shadow:0 20px 40px -14px rgba(217,20,58,.9)}
-.btn-glass{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px)}
-.btn-glass:hover{background:rgba(255,255,255,.18)}
-
-/* Header */
-.header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,transform .45s var(--ease)}
-.header.scrolled{background:rgba(0,18,31,.82);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 10px 30px rgba(0,0,0,.25)}
-.header.hide{transform:translateY(-100%)}
-.header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
-.logo img{height:46px;width:auto}
-.nav{display:flex;align-items:center;gap:34px}
-.nav a:not(.btn){position:relative;color:rgba(255,255,255,.85);font-weight:500;font-size:.95rem;transition:color .2s}
-.nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:var(--red-soft);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
-.nav a:not(.btn):hover{color:#fff}
-.nav a:not(.btn):hover::after,.nav a.active::after{transform:scaleX(1);transform-origin:left}
-.nav .btn{padding:12px 22px;font-size:.92rem}
-.menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer;width:44px;height:44px;position:relative}
-.menu-btn span{position:absolute;left:10px;right:10px;height:2px;background:#fff;border-radius:2px;transition:transform .4s var(--ease),opacity .3s}
-.menu-btn span:nth-child(1){top:15px}.menu-btn span:nth-child(2){top:21px}.menu-btn span:nth-child(3){top:27px}
-.menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.menu-open .menu-btn span:nth-child(2){opacity:0}
-.menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-
-/* HERO */
-.hero{position:relative;min-height:100vh;min-height:100svh;color:#fff;overflow:hidden;display:flex;align-items:center;padding:130px 0 90px;background:var(--navy-950)}
-.hero-bg{position:absolute;inset:-6%;background:url(assets/fotos/scania-cegonha.jpg) center 40%/cover;will-change:transform}
-.hero-bg::after{content:"";position:absolute;inset:0;background:inherit;animation:kenburns 22s ease-in-out infinite alternate}
-@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14) translate3d(-2%,-2%,0)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(0,18,31,.96) 0%,rgba(0,26,43,.86) 42%,rgba(0,38,62,.45) 75%,rgba(0,26,43,.75) 100%),linear-gradient(to top,rgba(0,18,31,.9),transparent 40%)}
-.hero::after{content:"";position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 30% 50%,#000 20%,transparent 70%);pointer-events:none}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;width:100%}
-.hero h1{font-size:clamp(2.6rem,6vw,5rem);font-weight:900;margin:22px 0 24px}
-.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
-.hero h1 .line > span{display:inline-block;transform:translateY(110%);animation:rise 1s var(--ease) forwards}
-.hero h1 .line:nth-child(2) > span{animation-delay:.12s}
-.hero h1 .line:nth-child(3) > span{animation-delay:.24s}
-.hero h1 em{font-style:normal;color:var(--red-soft)}
-@keyframes rise{to{transform:none}}
-.fade-up{opacity:0;transform:translateY(24px);animation:fadeUp .9s var(--ease) forwards}
-@keyframes fadeUp{to{opacity:1;transform:none}}
-.d1{animation-delay:.45s}.d2{animation-delay:.6s}.d3{animation-delay:.75s}.d4{animation-delay:.5s}
-.hero p.lead{font-size:1.15rem;color:rgba(255,255,255,.82);max-width:540px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:.85rem;color:rgba(255,255,255,.9);backdrop-filter:blur(6px)}
-.chip svg{color:var(--red-soft)}
-.scroll-hint{position:absolute;z-index:2;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.4);border-radius:14px}
-.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:wheel 1.8s ease-in-out infinite}
-@keyframes wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
-
-/* Form card */
-.quote{position:relative;background:rgba(255,255,255,.97);color:var(--ink);border-radius:26px;padding:34px;box-shadow:0 50px 100px -30px rgba(0,0,0,.7)}
-.quote h2{font-size:1.55rem;margin-bottom:6px}
-.quote > p{color:var(--muted);font-size:.95rem;margin-bottom:22px}
-.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fgrid .full{grid-column:1/-1}
-.field label{display:block;font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;font:inherit;font-size:.95rem;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:border .25s,background .25s,box-shadow .25s}
-.field textarea{resize:vertical;min-height:70px}
-.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--navy-700);background:#fff;box-shadow:0 0 0 4px rgba(0,58,91,.1)}
-.field .err{border-color:var(--red)!important;animation:shake .4s}
-@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
-.route-sep{grid-column:1/-1;display:flex;align-items:center;gap:10px;font:700 .72rem Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--navy-700);margin-top:6px}
-.route-sep::after{content:"";flex:1;height:1px;background:var(--line)}
-.quote .btn{width:100%;margin-top:18px}
-.quote small{display:block;text-align:center;color:var(--muted);font-size:.78rem;margin-top:12px}
-
-/* Marquee */
-.marquee{background:var(--red);color:#fff;overflow:hidden;padding:20px 0;position:relative;z-index:3}
-.marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.marquee span{display:inline-flex;align-items:center;gap:26px;padding-right:26px;font:800 1.15rem Archivo,sans-serif;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
-.marquee span::after{content:"";width:9px;height:9px;background:#fff;transform:rotate(45deg)}
-@keyframes marquee{to{transform:translateX(-50%)}}
-
-/* Sections */
-section{padding:120px 0;position:relative}
-.sec-head{max-width:660px;margin-bottom:60px}
-.sec-head h2{font-size:clamp(2.1rem,4vw,3.2rem);font-weight:800;margin-top:16px}
-.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px}
-.dark .sec-head p{color:rgba(255,255,255,.78)}
-.center{text-align:center;margin-left:auto;margin-right:auto}
-.center .eyebrow::after{content:"";width:28px;height:2px;background:currentColor}
-
-/* Stats */
-.stats-sec{padding:70px 0 10px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
-.stat{padding:34px 28px;border-right:1px solid var(--line)}
-.stat:last-child{border-right:0}
-.stat strong{display:block;font:900 clamp(2rem,3.4vw,2.8rem)/1 Archivo,sans-serif;color:var(--navy-700);letter-spacing:-.03em}
-.stat strong i{font-style:normal;color:var(--red)}
-.stat > span{display:block;margin-top:10px;color:var(--muted);font-size:.92rem}
-
-/* Services bento */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(220px,auto);gap:20px}
-.tile{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--bg);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.tile:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.tile h3{font-size:1.3rem;margin-bottom:8px;display:flex;align-items:center;gap:10px}
-.tile h3 svg{color:var(--red)}
-.tile p{color:var(--muted);font-size:.96rem}
-.tile.photo{color:#fff;border:0;min-height:420px}
-.tile.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 72%;transition:transform 1.2s var(--ease)}
-.tile.photo:hover img{transform:scale(1.07)}
-.tile.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,18,31,.92) 10%,rgba(0,18,31,.2) 60%,transparent)}
-.tile.photo > div{position:relative;z-index:1}
-.tile.photo p{color:rgba(255,255,255,.85)}
-.tile.photo h3 svg,.tile.navy h3 svg{color:var(--red-soft)}
-.tile.navy{background:linear-gradient(150deg,var(--navy-800),var(--navy-600));color:#fff;border:0}
-.tile.navy p{color:rgba(255,255,255,.82)}
-.t-a{grid-column:span 3;grid-row:span 2}
-.t-b,.t-c{grid-column:span 3}
-.t-d,.t-e,.t-f{grid-column:span 2}
-.tile .big{font:900 4.5rem/1 Archivo,sans-serif;color:rgba(0,58,91,.08);position:absolute;top:16px;right:22px}
-.tile.navy .big{color:rgba(255,255,255,.08)}
-
-/* About */
-.about{background:var(--bg);overflow:hidden}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-media{position:relative;height:560px}
-.about-media .m1,.about-media .m2{position:absolute;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
-.about-media img{width:100%;height:100%;object-fit:cover}
-.about-media .m1{inset:0 18% 18% 0}
-.about-media .m2{inset:46% 0 0 34%;border:8px solid var(--bg)}
-.about-badge{position:absolute;left:-14px;bottom:30px;z-index:2;background:var(--red);color:#fff;border-radius:18px;padding:18px 22px;box-shadow:0 20px 40px -15px rgba(217,20,58,.8);animation:float 5s ease-in-out infinite}
-.about-badge strong{display:block;font:900 2.2rem/1 Archivo,sans-serif}
-.about-badge span{font-size:.82rem;font-weight:600}
-@keyframes float{50%{transform:translateY(-10px)}}
-.about-text h2{font-size:clamp(2.1rem,4vw,3.2rem);margin-top:16px}
-.about-text p{color:var(--muted);font-size:1.06rem;margin-top:18px}
-.checks{list-style:none;margin-top:28px;display:grid;gap:14px}
-.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
-.checks li svg{color:var(--red);margin-top:3px}
-
-/* Steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
-.steps-line{position:absolute;left:34px;right:calc(25% - 34px);top:34px;height:2px;background:var(--line);z-index:0}
-.steps-line i{position:absolute;inset:0;background:linear-gradient(90deg,var(--red),var(--red-soft));transform-origin:0 50%;transform:scaleX(var(--p,0))}
-.step{position:relative;z-index:1}
-.step .num{width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--line);display:grid;place-items:center;font:900 1.4rem Archivo,sans-serif;color:var(--navy-700);margin-bottom:24px;transition:background .5s var(--ease),color .5s,border-color .5s,transform .5s var(--ease),box-shadow .5s}
-.step.lit .num{background:var(--red);border-color:var(--red);color:#fff;transform:scale(1.08);box-shadow:0 0 0 8px rgba(217,20,58,.12)}
-.step h3{font-size:1.2rem;margin-bottom:8px}
-.step p{color:var(--muted);font-size:.96rem}
-
-/* Values */
-.values{background:var(--navy-950);color:#fff;overflow:hidden}
-.values-bg{position:absolute;inset:-30% 0;background:url(assets/fotos/frota-patio-2.jpg) center 70%/cover;opacity:.18}
-.values::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--navy-950),transparent 30%,transparent 70%,var(--navy-950))}
-.values .wrap{position:relative;z-index:1}
-.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-.vcard{background:rgba(0,26,43,.6);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:40px;backdrop-filter:blur(10px);transition:border-color .4s,transform .5s var(--ease)}
-.vcard:hover{border-color:rgba(255,107,133,.5);transform:translateY(-4px)}
-.vcard h3{font-size:1.5rem;margin-bottom:24px;display:flex;align-items:center;gap:14px}
-.vcard h3 svg{color:var(--red-soft)}
-.vcard ul{list-style:none;display:grid;gap:18px}
-.vcard li{padding-left:22px;position:relative;color:rgba(255,255,255,.86)}
-.vcard li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:2px;background:var(--red-soft);transform:rotate(45deg)}
-
-/* Locations */
-.locs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.loc{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;transition:box-shadow .5s var(--ease),transform .5s var(--ease)}
-.loc:hover{box-shadow:var(--shadow);transform:translateY(-6px)}
-.loc-top{background:linear-gradient(135deg,var(--navy-800),var(--navy-600));color:#fff;padding:28px;position:relative;overflow:hidden}
-.loc-top .uf{position:absolute;right:16px;top:6px;font:900 4.6rem/1 Archivo,sans-serif;color:rgba(255,255,255,.1);transition:transform .6s var(--ease)}
-.loc:hover .uf{transform:translateX(-8px) scale(1.08)}
-.loc-top small{font:700 .72rem Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--red-soft)}
-.loc-top h3{font-size:1.35rem;margin-top:6px}
-.loc-body{padding:24px 28px;flex:1;display:flex;flex-direction:column;gap:18px}
-.loc-body p{color:var(--muted);font-size:.95rem}
-.loc-body a{margin-top:auto;font-weight:600;color:var(--navy-700);display:inline-flex;align-items:center;gap:8px}
-.loc-body a:hover{color:var(--red)}
-
-/* CTA with driving truck */
-.cta{padding:0 0 120px;overflow:hidden}
-.cta-box{position:relative;background:linear-gradient(120deg,var(--navy-900),var(--navy-700));border-radius:30px;padding:64px 60px;color:#fff;overflow:hidden;min-height:360px;display:flex;align-items:center}
-.cta-text{position:relative;z-index:2;max-width:520px}
-.cta-box h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:14px}
-.cta-box p{opacity:.85;margin:12px 0 28px}
-.cta-photo{position:absolute;top:0;right:0;bottom:0;width:58%;z-index:1;overflow:hidden;clip-path:inset(0 0 0 100%);transition:clip-path 1.4s var(--ease)}
-.cta-photo img{width:100%;height:100%;object-fit:cover;object-position:center 60%;transform:scale(1.2);transition:transform 2.2s var(--ease)}
-.cta-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy-900) 0%,rgba(0,26,43,.55) 35%,rgba(0,26,43,0) 70%)}
-.cta-box.in .cta-photo{clip-path:inset(0 0 0 0)}
-.cta-box.in .cta-photo img{transform:scale(1)}
-.cta-box:hover .cta-photo img{transform:scale(1.04)}
-
-/* Footer */
-footer{background:var(--navy-950);color:rgba(255,255,255,.8);padding:80px 0 30px;font-size:.95rem}
-.fgrid-foot{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:50px}
-footer h4{font:700 1rem Archivo,sans-serif;color:#fff;margin-bottom:18px}
-footer ul{list-style:none;display:grid;gap:10px}
-footer a{transition:color .2s}
-footer a:hover{color:#fff}
-footer .contact a{display:flex;gap:10px;align-items:center}
-.social{display:flex;gap:10px;margin-top:22px}
-.social a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#fff;transition:background .3s,transform .4s var(--ease)}
-.social a:hover{background:var(--red);transform:translateY(-3px) rotate(-6deg)}
-.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:60px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem}
-.linkbtn{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0;text-align:left}
-.linkbtn:hover{color:#fff}
-
-/* WhatsApp float */
-.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:transform .3s var(--ease)}
-.wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:pulse 2.4s ease-out infinite}
-@keyframes pulse{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
-.wa:hover{transform:scale(1.1)}
-
-/* Cookie + modal */
-.cookie{position:fixed;left:22px;bottom:22px;z-index:70;max-width:420px;background:#fff;border-radius:18px;box-shadow:0 20px 60px -15px rgba(0,0,0,.4);padding:22px;font-size:.88rem;color:var(--muted);transform:translateY(160%);transition:transform .7s var(--ease)}
-.cookie.show{transform:none}
-.cookie .row{display:flex;gap:10px;margin-top:14px}
-.cookie .btn{padding:10px 18px;font-size:.85rem}
-.btn-line{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
-.cookie button.linkbtn{color:var(--navy-700);font-weight:600;text-decoration:underline}
-dialog{border:0;border-radius:22px;max-width:720px;width:calc(100% - 32px);padding:0;box-shadow:0 30px 80px rgba(0,0,0,.4);margin:auto}
-dialog[open]{animation:pop .5s var(--ease)}
-@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97)}}
-dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
-.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--line);background:#fff}
-.dlg-head h3{font-size:1.25rem}
-.dlg-body{padding:24px 28px 30px;max-height:70vh;overflow:auto;color:var(--muted);font-size:.95rem}
-.dlg-body h4{color:var(--ink);font-family:Archivo,sans-serif;margin:20px 0 6px}
-.dlg-body ul{margin:8px 0 0 20px}
-.close{background:var(--bg);border:0;width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:1.3rem}
-
-/* Scroll reveals */
-.js .rv{opacity:0;transform:translateY(40px);filter:blur(6px);transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:var(--d,0s)}
-.js .rv.in{opacity:1;transform:none;filter:none}
-.tile.rv.in:hover,.loc.rv.in:hover{transform:translateY(-6px);transition-delay:0s}
-.vcard.rv.in:hover{transform:translateY(-4px);transition-delay:0s}
-.js .rv-img{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease),transform .5s var(--ease),box-shadow .5s var(--ease);transition-delay:var(--d,0s)}
-.js .rv-img > img{transform:scale(1.25);transition:transform 1.6s var(--ease)}
-.js .rv-img.in{clip-path:inset(0 0 0 0 round 0)}
-.js .rv-img.in > img{transform:scale(1)}
-.tile.photo.rv-img.in:hover > img{transform:scale(1.07)}
-.js .rv-left{opacity:0;transform:translateX(-60px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
-.js .rv-left.in{opacity:1;transform:none}
-.parallax{will-change:transform}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .rv,.rv-left,.fade-up{opacity:1;transform:none;filter:none}
-  .hero h1 .line > span{transform:none}
-  .rv-img{clip-path:none}.rv-img > img{transform:none}
-  .cta-photo{clip-path:none}.cta-photo img{transform:none}
-  html{scroll-behavior:auto}
-}
-
-/* Responsive */
-@media (max-width:1024px){
-  .hero-grid,.about-grid{grid-template-columns:1fr}
-  .hero{min-height:auto}
-  .scroll-hint{display:none}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:0}
-  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .bento{grid-template-columns:1fr 1fr}
-  .t-a,.t-b,.t-c,.t-d,.t-e,.t-f{grid-column:span 1;grid-row:auto}
-  .t-a{grid-column:1/-1}
-  .steps{grid-template-columns:1fr 1fr;row-gap:44px}
-  .steps-line{display:none}
-  .locs{grid-template-columns:1fr}
-  .fgrid-foot{grid-template-columns:1fr 1fr}
-  .about-media{height:460px}
-  .cta-photo{width:70%}
-  .cta-photo::after{background:linear-gradient(90deg,var(--navy-900) 0%,rgba(0,26,43,.75) 50%,rgba(0,26,43,.35) 100%)}
-}
-@media (max-width:820px){
-  .nav{position:fixed;inset:84px 0 auto;background:var(--navy-950);flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 24px;clip-path:inset(0 0 100% 0);transition:clip-path .5s var(--ease),visibility .5s;visibility:hidden}
-  .menu-open .nav{clip-path:inset(0);visibility:visible}
-  .nav a:not(.btn){padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-  .nav a:not(.btn)::after{display:none}
-  .nav .btn{margin-top:16px}
-  .menu-btn{display:block}
-  .header.menu-open{background:var(--navy-950)}
-}
-@media (max-width:640px){
-  .wrap{padding:0 16px}
-  section{padding:84px 0}
-  .hero{padding-top:110px}
-  .bento,.vgrid,.fgrid,.fgrid-foot,.steps{grid-template-columns:1fr}
-  .tile.photo{min-height:340px}
-  .bento{grid-auto-rows:auto}
-  .tile{min-height:0}
-  .quote{padding:24px}
-  .vcard{padding:28px}
-  .cta-box{padding:44px 26px;flex-direction:column;align-items:stretch;min-height:0}
-  .cta-photo{position:relative;width:auto;height:220px;margin:30px -26px -44px}
-  .cta-photo::after{background:linear-gradient(180deg,var(--navy-900) 0%,rgba(0,26,43,0) 45%)}
-  .stats-sec{padding-top:50px}
-  .stat{padding:24px 18px}
-  .about-media{height:380px}
-  .about-badge{left:8px}
-  .cookie{left:12px;right:12px;bottom:12px;max-width:none}
-  .wa{bottom:18px;right:18px}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <div class="progress" id="progress"></div>
@@ -363,32 +38,32 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
 
 <main>
 <!-- HERO -->
-<section class="hero" id="inicio">
+<section class="hero" id="inicio" data-cms-group="Topo (primeira tela)">
   <div class="hero-bg parallax" data-speed="0.25"></div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
         <h1>
-          <span class="line"><span>Seu veículo em</span></span>
-          <span class="line"><span><em>qualquer lugar</em></span></span>
-          <span class="line"><span>do Brasil.</span></span>
+          <span class="line"><span data-cms="topo.titulo1" data-cms-label="Título — linha 1">Seu veículo em</span></span>
+          <span class="line"><span><em data-cms="topo.titulo2" data-cms-label="Título — linha 2 (em destaque)">qualquer lugar</em></span></span>
+          <span class="line"><span data-cms="topo.titulo3" data-cms-label="Título — linha 3">do Brasil.</span></span>
         </h1>
-        <p class="lead fade-up d1">Transporte por caminhão-cegonha com seguro de carga e CT-e. Coleta, entrega e retirada em leilão, com agilidade, segurança e preço justo.</p>
+        <p class="lead fade-up d1" data-cms="topo.texto" data-cms-label="Texto abaixo do título">Transporte por caminhão-cegonha com seguro de carga e CT-e. Coleta, entrega e retirada em leilão, com agilidade, segurança e preço justo.</p>
         <div class="hero-ctas fade-up d2">
-          <a href="#orcamento" class="btn btn-red">Fazer cotação grátis
+          <a href="#orcamento" class="btn btn-red"><span data-cms="topo.botao" data-cms-label="Botão principal">Fazer cotação grátis</span>
             <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="https://api.whatsapp.com/send?phone=555193775912&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20transporte%20de%20ve%C3%ADculos." target="_blank" rel="noopener" class="btn btn-glass">Falar no WhatsApp</a>
+          <a data-cms-href="contato.whatsapp" href="https://api.whatsapp.com/send?phone=555193775912&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20transporte%20de%20ve%C3%ADculos." target="_blank" rel="noopener" class="btn btn-glass"><span data-cms="topo.botao2" data-cms-label="Botão do WhatsApp">Falar no WhatsApp</span></a>
         </div>
         <div class="chips fade-up d3">
-          <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seguradora Tokio</span>
-          <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>Todo o Brasil há 6 anos</span>
-          <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Seguro de carga e CT-e</span>
+          <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-cms="topo.selo1" data-cms-label="Selo 1">Seguradora Tokio</span></span>
+          <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg><span data-cms="topo.selo2" data-cms-label="Selo 2">Todo o Brasil há 6 anos</span></span>
+          <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-cms="topo.selo3" data-cms-label="Selo 3">Seguro de carga e CT-e</span></span>
         </div>
       </div>
 
       <form class="quote fade-up d4" id="orcamento" novalidate>
-        <h2>Solicite sua cotação</h2>
-        <p>Preencha os dados e receba o orçamento do transporte do seu veículo.</p>
+        <h2 data-cms="topo.form_titulo" data-cms-label="Formulário — título">Solicite sua cotação</h2>
+        <p data-cms="topo.form_texto" data-cms-label="Formulário — texto">Preencha os dados e receba o orçamento do transporte do seu veículo.</p>
         <div class="fgrid">
           <div class="field full"><label for="nome">Nome completo</label><input id="nome" name="nome" required autocomplete="name"></div>
           <div class="field"><label for="telefone">Telefone / WhatsApp</label><input id="telefone" name="telefone" required inputmode="tel" autocomplete="tel" placeholder="(51) 99999-9999"></div>
@@ -420,122 +95,122 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
 </div>
 
 <!-- STATS -->
-<div class="stats-sec">
+<div class="stats-sec" data-cms-group="Números">
   <div class="wrap">
     <div class="stats rv">
-      <div class="stat"><strong><span data-count="6">6</span> <i>anos</i></strong><span>De história, trabalho e conquistas</span></div>
-      <div class="stat"><strong><span data-count="4000" data-sep>4.000</span><i>m²</i></strong><span>De pátios no Sul e Sudeste</span></div>
-      <div class="stat"><strong><span data-count="3">3</span> <i>bases</i></strong><span>RS, PR e SP</span></div>
-      <div class="stat"><strong><span data-count="27">27</span> <i>UFs</i></strong><span>Atendimento em todo o território nacional</span></div>
+      <div class="stat"><strong><span data-count="6" data-cms="numeros.n1" data-cms-type="number" data-cms-label="Número 1">6</span> <i data-cms="numeros.u1" data-cms-label="Número 1 — unidade">anos</i></strong><span data-cms="numeros.t1" data-cms-label="Número 1 — descrição">De história, trabalho e conquistas</span></div>
+      <div class="stat"><strong><span data-count="4000" data-sep data-cms="numeros.n2" data-cms-type="number" data-cms-label="Número 2">4.000</span><i data-cms="numeros.u2" data-cms-label="Número 2 — unidade">m²</i></strong><span data-cms="numeros.t2" data-cms-label="Número 2 — descrição">De pátios no Sul e Sudeste</span></div>
+      <div class="stat"><strong><span data-count="3" data-cms="numeros.n3" data-cms-type="number" data-cms-label="Número 3">3</span> <i data-cms="numeros.u3" data-cms-label="Número 3 — unidade">bases</i></strong><span data-cms="numeros.t3" data-cms-label="Número 3 — descrição">RS, PR e SP</span></div>
+      <div class="stat"><strong><span data-count="27" data-cms="numeros.n4" data-cms-type="number" data-cms-label="Número 4">27</span> <i data-cms="numeros.u4" data-cms-label="Número 4 — unidade">UFs</i></strong><span data-cms="numeros.t4" data-cms-label="Número 4 — descrição">Atendimento em todo o território nacional</span></div>
     </div>
   </div>
 </div>
 
 <!-- SERVIÇOS -->
-<section id="servicos">
+<section id="servicos" data-cms-group="Serviços">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Serviços</span>
-      <h2>Tudo o que o transporte do seu veículo precisa</h2>
-      <p>Da retirada à entrega, cuidamos de cada etapa para pessoas físicas, lojistas e empresas.</p>
+      <span class="eyebrow" data-cms="servicos.sobretitulo" data-cms-label="Sobretítulo (vermelho)">Serviços</span>
+      <h2 data-cms="servicos.titulo" data-cms-label="Título">Tudo o que o transporte do seu veículo precisa</h2>
+      <p data-cms="servicos.texto" data-cms-label="Texto">Da retirada à entrega, cuidamos de cada etapa para pessoas físicas, lojistas e empresas.</p>
     </div>
     <div class="bento">
       <article class="tile photo t-a rv-img">
-        <img src="assets/fotos/frota-patio.jpg" alt="Frota de caminhões HG Transportes no pátio" loading="lazy">
+        <img data-cms="servicos.c1_foto" data-cms-type="image" data-cms-label="Card 1 — foto" src="assets/fotos/frota-patio.jpg" alt="Frota de caminhões HG Transportes no pátio" loading="lazy">
         <div>
-          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 16V6h13v10M14 9h4l3 3v4h-7"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg>Transporte por cegonha</h3>
-          <p>Frota própria de caminhões-cegonha em modernização constante, levando seu veículo com segurança para qualquer estado.</p>
+          <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 16V6h13v10M14 9h4l3 3v4h-7"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg><span data-cms="servicos.c1_titulo" data-cms-label="Card 1 — título">Transporte por cegonha</span></h3>
+          <p data-cms="servicos.c1_texto" data-cms-label="Card 1 — texto">Frota própria de caminhões-cegonha em modernização constante, levando seu veículo com segurança para qualquer estado.</p>
         </div>
       </article>
-      <article class="tile navy t-b rv" style="--d:.1s">
+      <article class="tile navy t-b rv d-10">
         <span class="big">01</span>
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6M8 8l6-6M9 7l8 8M21 11l-8-8"/></svg>Retirada em leilão</h3>
-        <p>Arrematou um veículo? Retiramos no pátio do leilão e levamos até você.</p>
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 13-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10"/><path d="m16 16 6-6M8 8l6-6M9 7l8 8M21 11l-8-8"/></svg><span data-cms="servicos.c2_titulo" data-cms-label="Card 2 — título">Retirada em leilão</span></h3>
+        <p data-cms="servicos.c2_texto" data-cms-label="Card 2 — texto">Arrematou um veículo? Retiramos no pátio do leilão e levamos até você.</p>
       </article>
-      <article class="tile t-c rv" style="--d:.2s">
+      <article class="tile t-c rv d-20">
         <span class="big">02</span>
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Coleta e entrega</h3>
-        <p>Buscamos e entregamos o veículo nos endereços combinados.</p>
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-cms="servicos.c3_titulo" data-cms-label="Card 3 — título">Coleta e entrega</span></h3>
+        <p data-cms="servicos.c3_texto" data-cms-label="Card 3 — texto">Buscamos e entregamos o veículo nos endereços combinados.</p>
       </article>
       <article class="tile t-d rv">
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Seguro de carga</h3>
-        <p>Veículos segurados pela Seguradora Tokio durante todo o trajeto, com CT-e.</p>
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-cms="servicos.c4_titulo" data-cms-label="Card 4 — título">Seguro de carga</span></h3>
+        <p data-cms="servicos.c4_texto" data-cms-label="Card 4 — texto">Veículos segurados pela Seguradora Tokio durante todo o trajeto, com CT-e.</p>
       </article>
-      <article class="tile t-e rv" style="--d:.1s">
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-6.5A2 2 0 0 0 15.6 9H8.4a2 2 0 0 0-1.9 1.5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>0 km, novos e usados</h3>
-        <p>Transporte particular e para empresas, de veículos zero, usados e de leilão.</p>
+      <article class="tile t-e rv d-10">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-6.5A2 2 0 0 0 15.6 9H8.4a2 2 0 0 0-1.9 1.5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg><span data-cms="servicos.c5_titulo" data-cms-label="Card 5 — título">0 km, novos e usados</span></h3>
+        <p data-cms="servicos.c5_texto" data-cms-label="Card 5 — texto">Transporte particular e para empresas, de veículos zero, usados e de leilão.</p>
       </article>
-      <article class="tile t-f rv" style="--d:.2s">
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Pátios próprios</h3>
-        <p>Mais de 4.000 m² de armazenamento no Sul e Sudeste para dar agilidade às rotas.</p>
+      <article class="tile t-f rv d-20">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg><span data-cms="servicos.c6_titulo" data-cms-label="Card 6 — título">Pátios próprios</span></h3>
+        <p data-cms="servicos.c6_texto" data-cms-label="Card 6 — texto">Mais de 4.000 m² de armazenamento no Sul e Sudeste para dar agilidade às rotas.</p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- QUEM SOMOS -->
-<section class="about" id="quem-somos">
+<section class="about" id="quem-somos" data-cms-group="Quem somos">
   <div class="wrap about-grid">
     <div class="about-media">
-      <div class="m1 rv-img"><img src="assets/fotos/scania-cegonha.jpg" alt="Caminhão-cegonha Scania da HG Transportes" loading="lazy"></div>
-      <div class="m2 rv-img" style="--d:.25s"><img src="assets/fotos/volvo-hg.jpg" alt="Caminhão Volvo com a marca HG Transportes" loading="lazy"></div>
-      <div class="about-badge"><strong>6 anos</strong><span>levando seu veículo mais longe</span></div>
+      <div class="m1 rv-img"><img data-cms="quem.foto1" data-cms-type="image" data-cms-label="Foto grande" src="assets/fotos/scania-cegonha.jpg" alt="Caminhão-cegonha Scania da HG Transportes" loading="lazy"></div>
+      <div class="m2 rv-img d-25"><img data-cms="quem.foto2" data-cms-type="image" data-cms-label="Foto pequena" src="assets/fotos/volvo-hg.jpg" alt="Caminhão Volvo com a marca HG Transportes" loading="lazy"></div>
+      <div class="about-badge"><strong data-cms="quem.selo_titulo" data-cms-label="Selo vermelho — destaque">6 anos</strong><span data-cms="quem.selo_texto" data-cms-label="Selo vermelho — texto">levando seu veículo mais longe</span></div>
     </div>
     <div class="about-text">
-      <div class="rv"><span class="eyebrow">Quem somos</span>
-      <h2>Especialistas em logística veicular</h2></div>
-      <p class="rv" style="--d:.1s">A HG Transportes é uma empresa de gestão logística especializada no transporte de veículos. Com sede no Rio Grande do Sul, dispõe de uma moderna frota de caminhões-cegonha e de mais de 4.000 m² de pátios de armazenamento nas regiões Sul e Sudeste.</p>
-      <p class="rv" style="--d:.2s">Atuante em todo o território nacional, temos profundo know-how no atendimento a clientes finais e a empresas em geral.</p>
+      <div class="rv"><span class="eyebrow" data-cms="quem.sobretitulo" data-cms-label="Sobretítulo (vermelho)">Quem somos</span>
+      <h2 data-cms="quem.titulo" data-cms-label="Título">Especialistas em logística veicular</h2></div>
+      <p class="rv d-10" data-cms="quem.texto1" data-cms-label="Parágrafo 1">A HG Transportes é uma empresa de gestão logística especializada no transporte de veículos. Com sede no Rio Grande do Sul, dispõe de uma moderna frota de caminhões-cegonha e de mais de 4.000 m² de pátios de armazenamento nas regiões Sul e Sudeste.</p>
+      <p class="rv d-20" data-cms="quem.texto2" data-cms-label="Parágrafo 2">Atuante em todo o território nacional, temos profundo know-how no atendimento a clientes finais e a empresas em geral.</p>
       <ul class="checks">
-        <li class="rv-left" style="transition-delay:.1s"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Atendimento a pessoas físicas e empresas</li>
-        <li class="rv-left" style="transition-delay:.2s"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bases em Cachoeirinha (RS), São José dos Pinhais (PR) e São Paulo (SP)</li>
-        <li class="rv-left" style="transition-delay:.3s"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Seguro de carga e CT-e em todo transporte</li>
+        <li class="rv-left d-10"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-cms="quem.item1" data-cms-label="Item 1 da lista">Atendimento a pessoas físicas e empresas</span></li>
+        <li class="rv-left d-20"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-cms="quem.item2" data-cms-label="Item 2 da lista">Bases em Cachoeirinha (RS), São José dos Pinhais (PR) e São Paulo (SP)</span></li>
+        <li class="rv-left d-30"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-cms="quem.item3" data-cms-label="Item 3 da lista">Seguro de carga e CT-e em todo transporte</span></li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- COMO FUNCIONA -->
-<section id="como-funciona">
+<section id="como-funciona" data-cms-group="Como funciona">
   <div class="wrap">
     <div class="sec-head center rv">
-      <span class="eyebrow">Como funciona</span>
-      <h2>Da cotação à entrega, em 4 passos</h2>
+      <span class="eyebrow" data-cms="como.sobretitulo" data-cms-label="Sobretítulo (vermelho)">Como funciona</span>
+      <h2 data-cms="como.titulo" data-cms-label="Título">Da cotação à entrega, em 4 passos</h2>
     </div>
     <div class="steps" id="steps">
       <div class="steps-line"><i></i></div>
-      <div class="step"><div class="num">01</div><h3>Cotação</h3><p>Envie origem, destino e modelo do veículo. Retornamos com o orçamento.</p></div>
-      <div class="step"><div class="num">02</div><h3>Coleta</h3><p>Combinamos data e local, ou retiramos direto no pátio do leilão.</p></div>
-      <div class="step"><div class="num">03</div><h3>Transporte</h3><p>Seu veículo viaja em caminhão-cegonha, com seguro de carga e CT-e.</p></div>
-      <div class="step"><div class="num">04</div><h3>Entrega</h3><p>Recebimento no destino combinado, com conferência do veículo.</p></div>
+      <div class="step"><div class="num">01</div><h3 data-cms="como.p1_titulo" data-cms-label="Passo 1 — título">Cotação</h3><p data-cms="como.p1_texto" data-cms-label="Passo 1 — texto">Envie origem, destino e modelo do veículo. Retornamos com o orçamento.</p></div>
+      <div class="step"><div class="num">02</div><h3 data-cms="como.p2_titulo" data-cms-label="Passo 2 — título">Coleta</h3><p data-cms="como.p2_texto" data-cms-label="Passo 2 — texto">Combinamos data e local, ou retiramos direto no pátio do leilão.</p></div>
+      <div class="step"><div class="num">03</div><h3 data-cms="como.p3_titulo" data-cms-label="Passo 3 — título">Transporte</h3><p data-cms="como.p3_texto" data-cms-label="Passo 3 — texto">Seu veículo viaja em caminhão-cegonha, com seguro de carga e CT-e.</p></div>
+      <div class="step"><div class="num">04</div><h3 data-cms="como.p4_titulo" data-cms-label="Passo 4 — título">Entrega</h3><p data-cms="como.p4_texto" data-cms-label="Passo 4 — texto">Recebimento no destino combinado, com conferência do veículo.</p></div>
     </div>
   </div>
 </section>
 
 <!-- VALORES -->
-<section class="values dark" id="valores">
+<section class="values dark" id="valores" data-cms-group="Valores">
   <div class="values-bg parallax" data-speed="0.08"></div>
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Nosso processo e valores</span>
-      <h2>Profissionalismo com valores de família</h2>
-      <p>Nossa missão é realizar todas as etapas que envolvem a logística de veículos.</p>
+      <span class="eyebrow" data-cms="valores.sobretitulo" data-cms-label="Sobretítulo (vermelho)">Nosso processo e valores</span>
+      <h2 data-cms="valores.titulo" data-cms-label="Título">Profissionalismo com valores de família</h2>
+      <p data-cms="valores.texto" data-cms-label="Texto">Nossa missão é realizar todas as etapas que envolvem a logística de veículos.</p>
     </div>
     <div class="vgrid">
       <div class="vcard rv">
-        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Nosso trabalho</h3>
+        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span data-cms="valores.card1_titulo" data-cms-label="Card 1 — título">Nosso trabalho</span></h3>
         <ul>
-          <li>Realizamos todas as etapas que envolvem a logística de veículos.</li>
-          <li>Os veículos sob nossos cuidados são segurados pela Seguradora Tokio.</li>
-          <li>Destacamo-nos pelo nível de exigência que demandamos dos próprios colaboradores.</li>
+          <li data-cms="valores.card1_item1" data-cms-label="Card 1 — item 1">Realizamos todas as etapas que envolvem a logística de veículos.</li>
+          <li data-cms="valores.card1_item2" data-cms-label="Card 1 — item 2">Os veículos sob nossos cuidados são segurados pela Seguradora Tokio.</li>
+          <li data-cms="valores.card1_item3" data-cms-label="Card 1 — item 3">Destacamo-nos pelo nível de exigência que demandamos dos próprios colaboradores.</li>
         </ul>
       </div>
-      <div class="vcard rv" style="--d:.15s">
-        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>Nossa cultura</h3>
+      <div class="vcard rv d-15">
+        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><span data-cms="valores.card2_titulo" data-cms-label="Card 2 — título">Nossa cultura</span></h3>
         <ul>
-          <li>Somos uma empresa com valores familiares.</li>
-          <li>Nosso espaço no mercado, tão almejado, está sendo conquistado passo a passo.</li>
-          <li>O legado que construímos é o alto grau de profissionalismo na logística de veículos.</li>
+          <li data-cms="valores.card2_item1" data-cms-label="Card 2 — item 1">Somos uma empresa com valores familiares.</li>
+          <li data-cms="valores.card2_item2" data-cms-label="Card 2 — item 2">Nosso espaço no mercado, tão almejado, está sendo conquistado passo a passo.</li>
+          <li data-cms="valores.card2_item3" data-cms-label="Card 2 — item 3">O legado que construímos é o alto grau de profissionalismo na logística de veículos.</li>
         </ul>
       </div>
     </div>
@@ -543,59 +218,59 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
 </section>
 
 <!-- LOCALIZAÇÃO -->
-<section id="localizacao">
+<section id="localizacao" data-cms-group="Localização">
   <div class="wrap">
     <div class="sec-head center rv">
-      <span class="eyebrow">Localização</span>
-      <h2>Nossas bases</h2>
-      <p>Estrutura no Sul e Sudeste para coletar e entregar com agilidade.</p>
+      <span class="eyebrow" data-cms="local.sobretitulo" data-cms-label="Sobretítulo (vermelho)">Localização</span>
+      <h2 data-cms="local.titulo" data-cms-label="Título">Nossas bases</h2>
+      <p data-cms="local.texto" data-cms-label="Texto">Estrutura no Sul e Sudeste para coletar e entregar com agilidade.</p>
     </div>
     <div class="locs">
       <article class="loc rv">
-        <div class="loc-top"><span class="uf">RS</span><small>Matriz</small><h3>Cachoeirinha</h3></div>
-        <div class="loc-body"><p>RS-118, R. Lateral, 12440 – Jardim Betânia<br>Cachoeirinha – RS · CEP 94970-850</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=RS-118%2C%20R.%20Lateral%2C%2012440%2C%20Cachoeirinha%20-%20RS%2C%2094970-850" target="_blank" rel="noopener">Ver no mapa →</a></div>
+        <div class="loc-top"><span class="uf">RS</span><small data-cms="local.rs_tipo" data-cms-label="Base RS — tipo">Matriz</small><h3 data-cms="local.rs_cidade" data-cms-label="Base RS — cidade">Cachoeirinha</h3></div>
+        <div class="loc-body"><p data-cms="local.rs_endereco" data-cms-type="address" data-cms-label="Base RS — endereço (o link do mapa acompanha)">RS-118, R. Lateral, 12440 – Jardim Betânia<br>Cachoeirinha – RS · CEP 94970-850</p>
+          <a data-cms-href="local.rs_endereco" href="https://www.google.com/maps/search/?api=1&query=RS-118%2C%20R.%20Lateral%2C%2012440%2C%20Cachoeirinha%20-%20RS%2C%2094970-850" target="_blank" rel="noopener">Ver no mapa →</a></div>
       </article>
-      <article class="loc rv" style="--d:.12s">
-        <div class="loc-top"><span class="uf">PR</span><small>Base de apoio</small><h3>São José dos Pinhais</h3></div>
-        <div class="loc-body"><p>R. Evelize Ap. Rosseti Mendes, 244 – Borda do Campo<br>São José dos Pinhais – PR · CEP 83075-270</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=R.%20Evelize%20Ap%20Rosseti%20Mendes%2C%20244%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%20-%20PR%2C%2083075-270" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      <article class="loc rv d-12">
+        <div class="loc-top"><span class="uf">PR</span><small data-cms="local.pr_tipo" data-cms-label="Base PR — tipo">Base de apoio</small><h3 data-cms="local.pr_cidade" data-cms-label="Base PR — cidade">São José dos Pinhais</h3></div>
+        <div class="loc-body"><p data-cms="local.pr_endereco" data-cms-type="address" data-cms-label="Base PR — endereço (o link do mapa acompanha)">R. Evelize Ap. Rosseti Mendes, 244 – Borda do Campo<br>São José dos Pinhais – PR · CEP 83075-270</p>
+          <a data-cms-href="local.pr_endereco" href="https://www.google.com/maps/search/?api=1&query=R.%20Evelize%20Ap%20Rosseti%20Mendes%2C%20244%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%20-%20PR%2C%2083075-270" target="_blank" rel="noopener">Ver no mapa →</a></div>
       </article>
-      <article class="loc rv" style="--d:.24s">
-        <div class="loc-top"><span class="uf">SP</span><small>Base de apoio</small><h3>São Paulo</h3></div>
-        <div class="loc-body"><p>R. Soteldo Hamílton Silva Costa, 196 – Parque Novo Mundo<br>São Paulo – SP · CEP 02190-010</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Soteldo%20Ham%C3%ADlton%20Silva%20Costa%2C%20196%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002190-010" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      <article class="loc rv d-24">
+        <div class="loc-top"><span class="uf">SP</span><small data-cms="local.sp_tipo" data-cms-label="Base SP — tipo">Base de apoio</small><h3 data-cms="local.sp_cidade" data-cms-label="Base SP — cidade">São Paulo</h3></div>
+        <div class="loc-body"><p data-cms="local.sp_endereco" data-cms-type="address" data-cms-label="Base SP — endereço (o link do mapa acompanha)">R. Soteldo Hamílton Silva Costa, 196 – Parque Novo Mundo<br>São Paulo – SP · CEP 02190-010</p>
+          <a data-cms-href="local.sp_endereco" href="https://www.google.com/maps/search/?api=1&query=Rua%20Soteldo%20Ham%C3%ADlton%20Silva%20Costa%2C%20196%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002190-010" target="_blank" rel="noopener">Ver no mapa →</a></div>
       </article>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta" data-cms-group="Chamada final">
   <div class="wrap">
     <div class="cta-box" id="ctaBox">
       <div class="cta-text">
-        <span class="eyebrow" style="color:var(--red-soft)">Pronto para rodar</span>
-        <h2>Precisa transportar um veículo?</h2>
-        <p>Fale com a nossa equipe e receba sua cotação.</p>
-        <a href="#orcamento" class="btn btn-red">Pedir cotação agora
+        <span class="eyebrow" data-cms="cta.sobretitulo" data-cms-label="Sobretítulo">Pronto para rodar</span>
+        <h2 data-cms="cta.titulo" data-cms-label="Título">Precisa transportar um veículo?</h2>
+        <p data-cms="cta.texto" data-cms-label="Texto">Fale com a nossa equipe e receba sua cotação.</p>
+        <a href="#orcamento" class="btn btn-red"><span data-cms="cta.botao" data-cms-label="Botão">Pedir cotação agora</span>
           <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <div class="cta-photo"><img src="assets/fotos/volvo-cegonha.jpg" alt="Caminhão HG Transportes carregado de veículos" loading="lazy"></div>
+      <div class="cta-photo"><img data-cms="cta.foto" data-cms-type="image" data-cms-label="Foto" src="assets/fotos/volvo-cegonha.jpg" alt="Caminhão HG Transportes carregado de veículos" loading="lazy"></div>
     </div>
   </div>
 </section>
 </main>
 
-<footer>
+<footer data-cms-group="Contato e rodapé">
   <div class="wrap">
     <div class="fgrid-foot">
-      <div>
-        <img src="assets/logo.png" alt="HG Transportes" style="height:52px;width:auto">
-        <p style="margin-top:18px;max-width:340px">Gestão logística especializada no transporte de veículos para todo o Brasil.</p>
+      <div class="brand">
+        <img src="assets/logo.png" alt="HG Transportes">
+        <p data-cms="rodape.frase" data-cms-label="Frase abaixo do logo">Gestão logística especializada no transporte de veículos para todo o Brasil.</p>
         <div class="social">
-          <a href="https://www.instagram.com/hgtransportesrs/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="https://www.facebook.com/hgtransportesrs" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a data-cms="contato.instagram" data-cms-type="link" data-cms-label="Link do Instagram" href="https://www.instagram.com/hgtransportesrs/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a data-cms="contato.facebook" data-cms-type="link" data-cms-label="Link do Facebook" href="https://www.facebook.com/hgtransportesrs" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
         </div>
       </div>
       <div>
@@ -612,10 +287,10 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
       <div class="contact">
         <h4>Contato</h4>
         <ul>
-          <li><a href="tel:+5551993775912"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+55 (51) 99377-5912</a></li>
-          <li><a href="tel:+5551983132166"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+55 (51) 98313-2166</a></li>
-          <li><a href="tel:+5511987146710"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+55 (11) 98714-6710</a></li>
-          <li><a href="mailto:coletashgtransportes@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>coletashgtransportes@gmail.com</a></li>
+          <li><a data-cms-href="contato.tel1" href="tel:+5551993775912"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-cms="contato.tel1" data-cms-type="phone" data-cms-label="Telefone 1">+55 (51) 99377-5912</span></a></li>
+          <li><a data-cms-href="contato.tel2" href="tel:+5551983132166"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-cms="contato.tel2" data-cms-type="phone" data-cms-label="Telefone 2">+55 (51) 98313-2166</span></a></li>
+          <li><a data-cms-href="contato.tel3" href="tel:+5511987146710"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-cms="contato.tel3" data-cms-type="phone" data-cms-label="Telefone 3">+55 (11) 98714-6710</span></a></li>
+          <li><a data-cms-href="contato.email" href="mailto:coletashgtransportes@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span data-cms="contato.email" data-cms-type="email" data-cms-label="E-mail">coletashgtransportes@gmail.com</span></a></li>
         </ul>
       </div>
     </div>
@@ -626,7 +301,7 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
   </div>
 </footer>
 
-<a class="wa" href="https://api.whatsapp.com/send?phone=555193775912&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20transporte%20de%20ve%C3%ADculos." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+<a class="wa" data-cms-href="contato.whatsapp" href="https://api.whatsapp.com/send?phone=555193775912&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20transporte%20de%20ve%C3%ADculos." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
 </a>
 
@@ -655,7 +330,7 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
     <p>Podemos atualizar esta política periodicamente. As alterações entram em vigor a partir da publicação no site.</p>
     <h4>Política de cookies</h4>
     <p>Utilizamos cookies para melhorar a experiência do usuário e oferecer um serviço personalizado. Cookies são pequenos arquivos de texto armazenados no seu dispositivo que registram preferências e hábitos de navegação. Você pode desativá-los nas configurações do navegador, mas algumas funcionalidades podem não funcionar corretamente. Usamos cookies de terceiros confiáveis, como Google Analytics e Facebook Ads, que seguem suas próprias políticas de privacidade.</p>
-    <p style="margin-top:20px">Dúvidas: <a href="mailto:hgtransportesrs@gmail.com" style="color:var(--navy-700);font-weight:600">hgtransportesrs@gmail.com</a></p>
+    <p class="duvidas">Dúvidas: <a href="mailto:hgtransportesrs@gmail.com">hgtransportesrs@gmail.com</a></p>
   </div>
 </dialog>
 
@@ -693,7 +368,8 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
       '\n\n*Origem:* '+v('cidade-origem')+' / '+v('uf-origem')+
       '\n*Destino:* '+v('cidade-destino')+' / '+v('uf-destino')+
       '\n*Veículo:* '+v('veiculo')+(v('mensagem')?'\n\n*Mensagem:* '+v('mensagem'):'');
-    window.open('https://api.whatsapp.com/send?phone=555193775912&text='+encodeURIComponent(msg),'_blank','noopener');
+    var waMeta=document.querySelector('meta[name=hg-whatsapp]'),waNum=(waMeta&&waMeta.content||'555193775912').replace(/\D/g,'');
+    window.open('https://api.whatsapp.com/send?phone='+waNum+'&text='+encodeURIComponent(msg),'_blank','noopener');
   });
   form.addEventListener('input',function(e){e.target.classList.remove('err')});
 
@@ -716,7 +392,9 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
       });
     }
     var sr=steps.getBoundingClientRect();
-    var p=Math.min(1,Math.max(0,(innerHeight*0.8-sr.top)/(innerHeight*0.5)));
+    var p=innerWidth<=640
+      ? Math.min(1,Math.max(0,(innerHeight*0.65-sr.top)/Math.max(1,sr.height-40)))
+      : Math.min(1,Math.max(0,(innerHeight*0.8-sr.top)/(innerHeight*0.5)));
     line.style.setProperty('--p',p);
     stepEls.forEach(function(s,i){s.classList.toggle('lit',p>=i/(stepEls.length-1)-0.01)});
     ticking=false;
@@ -786,10 +464,10 @@ dialog::backdrop{background:rgba(0,18,31,.6);backdrop-filter:blur(4px)}
   // cookies
   var ck=document.getElementById('cookie'),stored=null;
   try{stored=localStorage.getItem('hg-cookies')}catch(e){}
-  if(!stored) setTimeout(function(){ck.classList.add('show')},1800);
+  if(!stored) setTimeout(function(){ck.classList.add('show');document.body.classList.add('ck-open')},1800);
   ck.querySelectorAll('[data-cookie]').forEach(function(b){b.addEventListener('click',function(){
     try{localStorage.setItem('hg-cookies',b.dataset.cookie)}catch(e){}
-    ck.classList.remove('show');
+    ck.classList.remove('show');document.body.classList.remove('ck-open');
   })});
 
   document.getElementById('year').textContent=new Date().getFullYear();

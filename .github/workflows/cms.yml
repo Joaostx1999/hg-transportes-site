@@ -1,0 +1,53 @@
+# Painel (CMS): confere os marcadores do site contra o esquema e roda a suíte do Worker.
+name: cms
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cms-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      # actions fixadas por SHA (tag pode ser movida); o Dependabot (.github/dependabot.yml) propõe as novas
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar marcadores (index.html x cms/schema.json)
+        run: npm run validar-marcadores
+
+      - name: Esquema em dia com o index.html
+        run: node scripts/gerar-schema.mjs --check
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Formatação
+        run: npm run format:check
+
+      - name: Testes (runtime do Workers + Node)
+        run: npm test

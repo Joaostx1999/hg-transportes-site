@@ -1,2 +1,12 @@
 .impeccable/
 .DS_Store
+api/node_modules
+api/.wrangler
+api/.dev-repo
+api/.dev-admin
+api/.dev.vars
+api/.dev-logs
+api/.dev.vars.*
+!api/.dev.vars.example
+api/e2e/shots
+api/e2e/ultimo-resultado.txt

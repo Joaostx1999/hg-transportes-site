@@ -1,0 +1,790 @@
+{
+  "version": 1,
+  "page": "index.html",
+  "fields": [
+    {
+      "key": "seo.titulo",
+      "type": "text",
+      "group": "Google (busca)",
+      "label": "Título na aba e no Google",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "seo.descricao",
+      "type": "meta",
+      "group": "Google (busca)",
+      "label": "Descrição que aparece no Google",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "contato.whatsapp",
+      "type": "whatsapp",
+      "group": "Contato e rodapé",
+      "label": "Número do WhatsApp (recebe as cotações)",
+      "max": 30,
+      "required": true
+    },
+    {
+      "key": "topo.titulo1",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Título — linha 1",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.titulo2",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Título — linha 2 (em destaque)",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.titulo3",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Título — linha 3",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.texto",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Texto abaixo do título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.botao",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Botão principal",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.botao2",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Botão do WhatsApp",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.selo1",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Selo 1",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.selo2",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Selo 2",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.selo3",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Selo 3",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.form_titulo",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Formulário — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "topo.form_texto",
+      "type": "text",
+      "group": "Topo (primeira tela)",
+      "label": "Formulário — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.n1",
+      "type": "number",
+      "group": "Números",
+      "label": "Número 1",
+      "max": 9,
+      "required": true
+    },
+    {
+      "key": "numeros.u1",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 1 — unidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.t1",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 1 — descrição",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.n2",
+      "type": "number",
+      "group": "Números",
+      "label": "Número 2",
+      "max": 9,
+      "required": true
+    },
+    {
+      "key": "numeros.u2",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 2 — unidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.t2",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 2 — descrição",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.n3",
+      "type": "number",
+      "group": "Números",
+      "label": "Número 3",
+      "max": 9,
+      "required": true
+    },
+    {
+      "key": "numeros.u3",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 3 — unidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.t3",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 3 — descrição",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.n4",
+      "type": "number",
+      "group": "Números",
+      "label": "Número 4",
+      "max": 9,
+      "required": true
+    },
+    {
+      "key": "numeros.u4",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 4 — unidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "numeros.t4",
+      "type": "text",
+      "group": "Números",
+      "label": "Número 4 — descrição",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.sobretitulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Sobretítulo (vermelho)",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c1_foto",
+      "type": "image",
+      "group": "Serviços",
+      "label": "Card 1 — foto",
+      "max": 200,
+      "required": true
+    },
+    {
+      "key": "servicos.c1_titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 1 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c1_texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 1 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c2_titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 2 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c2_texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 2 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c3_titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 3 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c3_texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 3 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c4_titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 4 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c4_texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 4 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c5_titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 5 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c5_texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 5 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c6_titulo",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 6 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "servicos.c6_texto",
+      "type": "text",
+      "group": "Serviços",
+      "label": "Card 6 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.foto1",
+      "type": "image",
+      "group": "Quem somos",
+      "label": "Foto grande",
+      "max": 200,
+      "required": true
+    },
+    {
+      "key": "quem.foto2",
+      "type": "image",
+      "group": "Quem somos",
+      "label": "Foto pequena",
+      "max": 200,
+      "required": true
+    },
+    {
+      "key": "quem.selo_titulo",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Selo vermelho — destaque",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.selo_texto",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Selo vermelho — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.sobretitulo",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Sobretítulo (vermelho)",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.titulo",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.texto1",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Parágrafo 1",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.texto2",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Parágrafo 2",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.item1",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Item 1 da lista",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.item2",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Item 2 da lista",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "quem.item3",
+      "type": "text",
+      "group": "Quem somos",
+      "label": "Item 3 da lista",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.sobretitulo",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Sobretítulo (vermelho)",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.titulo",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p1_titulo",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 1 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p1_texto",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 1 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p2_titulo",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 2 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p2_texto",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 2 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p3_titulo",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 3 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p3_texto",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 3 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p4_titulo",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 4 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "como.p4_texto",
+      "type": "text",
+      "group": "Como funciona",
+      "label": "Passo 4 — texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.sobretitulo",
+      "type": "text",
+      "group": "Valores",
+      "label": "Sobretítulo (vermelho)",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.titulo",
+      "type": "text",
+      "group": "Valores",
+      "label": "Título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.texto",
+      "type": "text",
+      "group": "Valores",
+      "label": "Texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card1_titulo",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 1 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card1_item1",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 1 — item 1",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card1_item2",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 1 — item 2",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card1_item3",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 1 — item 3",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card2_titulo",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 2 — título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card2_item1",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 2 — item 1",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card2_item2",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 2 — item 2",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "valores.card2_item3",
+      "type": "text",
+      "group": "Valores",
+      "label": "Card 2 — item 3",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.sobretitulo",
+      "type": "text",
+      "group": "Localização",
+      "label": "Sobretítulo (vermelho)",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.titulo",
+      "type": "text",
+      "group": "Localização",
+      "label": "Título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.texto",
+      "type": "text",
+      "group": "Localização",
+      "label": "Texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.rs_tipo",
+      "type": "text",
+      "group": "Localização",
+      "label": "Base RS — tipo",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.rs_cidade",
+      "type": "text",
+      "group": "Localização",
+      "label": "Base RS — cidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.rs_endereco",
+      "type": "address",
+      "group": "Localização",
+      "label": "Base RS — endereço (o link do mapa acompanha)",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "local.pr_tipo",
+      "type": "text",
+      "group": "Localização",
+      "label": "Base PR — tipo",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.pr_cidade",
+      "type": "text",
+      "group": "Localização",
+      "label": "Base PR — cidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.pr_endereco",
+      "type": "address",
+      "group": "Localização",
+      "label": "Base PR — endereço (o link do mapa acompanha)",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "local.sp_tipo",
+      "type": "text",
+      "group": "Localização",
+      "label": "Base SP — tipo",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.sp_cidade",
+      "type": "text",
+      "group": "Localização",
+      "label": "Base SP — cidade",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "local.sp_endereco",
+      "type": "address",
+      "group": "Localização",
+      "label": "Base SP — endereço (o link do mapa acompanha)",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "cta.sobretitulo",
+      "type": "text",
+      "group": "Chamada final",
+      "label": "Sobretítulo",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "cta.titulo",
+      "type": "text",
+      "group": "Chamada final",
+      "label": "Título",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "cta.texto",
+      "type": "text",
+      "group": "Chamada final",
+      "label": "Texto",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "cta.botao",
+      "type": "text",
+      "group": "Chamada final",
+      "label": "Botão",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "cta.foto",
+      "type": "image",
+      "group": "Chamada final",
+      "label": "Foto",
+      "max": 200,
+      "required": true
+    },
+    {
+      "key": "rodape.frase",
+      "type": "text",
+      "group": "Contato e rodapé",
+      "label": "Frase abaixo do logo",
+      "max": 600,
+      "required": true
+    },
+    {
+      "key": "contato.instagram",
+      "type": "link",
+      "group": "Contato e rodapé",
+      "label": "Link do Instagram",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "contato.facebook",
+      "type": "link",
+      "group": "Contato e rodapé",
+      "label": "Link do Facebook",
+      "max": 300,
+      "required": true
+    },
+    {
+      "key": "contato.tel1",
+      "type": "phone",
+      "group": "Contato e rodapé",
+      "label": "Telefone 1",
+      "max": 30,
+      "required": true
+    },
+    {
+      "key": "contato.tel2",
+      "type": "phone",
+      "group": "Contato e rodapé",
+      "label": "Telefone 2",
+      "max": 30,
+      "required": true
+    },
+    {
+      "key": "contato.tel3",
+      "type": "phone",
+      "group": "Contato e rodapé",
+      "label": "Telefone 3",
+      "max": 30,
+      "required": true
+    },
+    {
+      "key": "contato.email",
+      "type": "email",
+      "group": "Contato e rodapé",
+      "label": "E-mail",
+      "max": 120,
+      "required": true
+    }
+  ]
+}

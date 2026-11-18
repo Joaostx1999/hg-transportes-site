@@ -1,0 +1,39 @@
+{
+  "name": "hg-cms-api",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Backend do painel do site HG Transportes (Cloudflare Worker + Durable Object).",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json && tsc -p test/node/tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "e2e": "bash e2e/run.sh",
+    "check": "npm run validar-marcadores && npm run typecheck && npm run lint && npm run format:check && npm run test",
+    "dev": "wrangler dev --ip 127.0.0.1 --port 8787",
+    "mock": "node dev/github-mock.mjs",
+    "gerar-schema": "node scripts/gerar-schema.mjs",
+    "validar-marcadores": "node scripts/validar-marcadores.mjs",
+    "criar-usuario": "node scripts/criar-usuario.mjs",
+    "cf-typegen": "wrangler types --include-env=false"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "1.5.1",
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.4",
+    "eslint": "10.14.0",
+    "globals": "17.14.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "7.3.8",
+    "vitest": "4.1.12",
+    "wrangler": "4.157.0",
+    "yaml": "2.9.1"
+  }
+}
