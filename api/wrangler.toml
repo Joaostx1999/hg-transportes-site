@@ -1,0 +1,39 @@
+# Worker do painel HG Transportes (v3). Segredos NUNCA aqui; use `npx wrangler secret put <NOME>`:
+#   GITHUB_TOKEN (obrigatório), PASSWORD_PEPPER (obrigatório, >= 32), TURNSTILE_SECRET (opcional).
+#   Efêmeros (apagar logo depois do uso): BOOTSTRAP_SECRET (1º admin, >= 32), RECOVERY_SECRET (recuperação
+#   de admin, >= 32, uso único) e PASSWORD_PEPPER_PREV (só durante a rotação do pepper).
+# GITHUB_API_BASE só aceita https://api.github.com; o mock local exige DEV_ALLOW_LOCAL_GITHUB=1 (só no .dev.vars).
+# Em dev, os valores locais vêm de api/.dev.vars (fora do git; modelo em .dev.vars.example).
+name = "hg-cms-api"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[observability]
+enabled = true
+
+# Estado forte (usuários, sessões, limite de tentativas, auditoria): um Durable Object SQLite global.
+[[durable_objects.bindings]]
+name = "CMS_STATE"
+class_name = "CmsState"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["CmsState"]
+
+[vars]
+GITHUB_OWNER = "Joaostx1999"
+GITHUB_REPO = "hg-transportes-site"
+GITHUB_BRANCH = "main"
+GITHUB_API_BASE = "https://api.github.com"
+ALLOWED_ORIGINS = "https://joaostx1999.github.io"
+SITE_PAGE = "index.html"
+SCHEMA_PATH = "cms/schema.json"
+SESSION_IDLE_SECONDS = "3600"
+SESSION_MAX_SECONDS = "43200"
+MAX_UPLOAD_BYTES = "3145728"
+# Teto do PBKDF2 no WebCrypto do Workers (medido em teste: 100000 passa, 100001 falha).
+PBKDF2_ITERATIONS = "100000"
+# Versão do PASSWORD_PEPPER atual (gravada em cada hash). Na rotação: PASSWORD_PEPPER_PREV_ID = versão antiga
+# e este +1 (docs/operacao.md, "Rotacionar o pepper").
+PASSWORD_PEPPER_ID = "1"

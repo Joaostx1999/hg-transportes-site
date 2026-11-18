@@ -1,0 +1,12 @@
+# Copie para api/.dev.vars (fora do git). O dev/start-dev.sh cria esse arquivo sozinho se não existir.
+# Valores só para o ambiente local com o mock do GitHub (nunca use estes valores em produção).
+GITHUB_TOKEN=dev-token
+GITHUB_API_BASE=http://127.0.0.1:8788
+# Sem esta linha o Worker recusa GITHUB_API_BASE que não seja https://api.github.com (S9).
+DEV_ALLOW_LOCAL_GITHUB=1
+PASSWORD_PEPPER=dev-pepper-somente-local-troque-em-producao-0123456789
+ALLOWED_ORIGINS=http://127.0.0.1:8781,http://localhost:8781
+BOOTSTRAP_SECRET=dev-bootstrap-secret-somente-local-0123
+# Opcional (recuperação de admin, uso único, >= 32 caracteres): RECOVERY_SECRET=
+# Opcional: com TURNSTILE_SECRET definido, /login exige turnstileToken.
+# TURNSTILE_SECRET=

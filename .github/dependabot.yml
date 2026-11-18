@@ -1,0 +1,16 @@
+# Atualizações automáticas (PRs semanais): dependências npm do Worker (api/) e as actions do CI, que estão
+# fixadas por SHA em .github/workflows/cms.yml (o Dependabot atualiza o SHA e o comentário da versão).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /api
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      dev-dependencies:
+        dependency-type: development
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

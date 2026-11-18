@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.dev-repo/
+.dev-admin/
+.dev-logs/
+package-lock.json
+worker-configuration.d.ts
+src/senhas-comuns.ts
